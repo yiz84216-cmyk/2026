@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>福岡之旅</title>
+    <style>
+        @page { size: A4; margin: 0; background-color: #f8f9fa; }
+        body {
+            font-family: "PingFang TC", "Microsoft JhengHei", sans-serif;
+            margin: 0; padding: 0; color: #333; background-color: #f8f9fa; padding-bottom: 50px;
+        }
+        .header {
+            background: linear-gradient(135deg, #ff6b6b 0%, #ee5253 100%);
+            color: white; padding: 30px 20px; text-align: center;
+        }
+        .header h1 { margin: 0; font-size: 24pt; letter-spacing: 2px; }
+        .header p { margin: 10px 0 0; opacity: 0.9; }
+        .print-btn {
+            display: block; width: 200px; margin: 20px auto; padding: 10px;
+            background: #2f3640; color: white; border: none; border-radius: 20px;
+            cursor: pointer; text-align: center; font-weight: bold;
+        }
+        @media print { .print-btn { display: none; } }
+        .important-card {
+            background-color: #fff3cd; border-left: 5px solid #ffca28;
+            margin: 15px; padding: 15px; border-radius: 8px; font-size: 11pt; line-height: 1.8;
+        }
+        .important-card a { color: #d35400; font-weight: bold; text-decoration: underline; }
+        .day-container {
+            margin: 15px; background: white; border-radius: 12px;
+            overflow: hidden; box-shadow: 0 4px 6px rgba(0,0,0,0.05); page-break-inside: avoid;
+        }
+        .day-title { background: #4834d4; color: white; padding: 12px 15px; font-size: 13pt; font-weight: bold; }
+        .day-title span { font-size: 10pt; font-weight: normal; float: right; margin-top: 3px; }
+        .item { display: flex; padding: 12px 15px; border-bottom: 1px solid #eee; align-items: flex-start; }
+        .item:last-child { border-bottom: none; }
+        .time { width: 60px; font-weight: bold; color: #686de0; font-size: 10pt; flex-shrink: 0; margin-top: 2px; }
+        .activity { flex: 1; font-size: 11pt; padding-left: 10px; line-height: 1.5; }
+        .activity a { text-decoration: none; color: #2f3542; display: inline; }
+        
+        /* 標籤樣式：確保不換行並緊跟文字 */
+        .tag { 
+            display: inline-block;
+            font-size: 9pt; 
+            padding: 2px 8px; 
+            border-radius: 4px; 
+            margin-left: 6px; 
+            white-space: nowrap;
+            vertical-align: middle;
+        }
+        .tag-food { background: #ffeaa7; color: #d35400; }
+        .tag-car { background: #dff9fb; color: #130f40; }
+        .tag-shop { background: #fab1a0; color: #c0392b; }
+        .tag-baby { background: #e3f2fd; color: #1565c0; }
+        
+        .link-box { margin-top: 8px; background: #f1f2f6; padding: 10px; border-radius: 6px; border: 1px solid #dcdde1; }
+        .link-box a { color: #2f3542; font-size: 10pt; font-weight: bold; text-decoration: underline !important; }
+
+        .wishlist-container { margin: 15px; background: #f1f2f6; border: 2px dashed #a4b0be; border-radius: 12px; padding: 15px; }
+        .wishlist-title { color: #2f3542; font-size: 12pt; font-weight: bold; margin-bottom: 10px; }
+        .wishlist-item { background: white; margin-bottom: 8px; padding: 10px; border-radius: 8px; font-size: 10pt; }
+        .wishlist-item a { color: #e84118; text-decoration: underline; font-weight: bold; }
+
+        .footer { text-align: center; padding: 20px; font-size: 10pt; color: #95a5a6; }
+    </style>
+</head>
+<body>
+
+    <div class="header">
+        <h1>FUKUOKA 2024</h1>
+        <p>6/3 － 6/9 福跨卡之旅</p>
+    </div>
+
+    <button class="print-btn" onclick="window.print()">📥 儲存成 PDF / 列印行程</button>
+
+    <div class="important-card">
+        <strong>🏠 住宿：</strong> <a href="https://maps.app.goo.gl/yTdq8mY565pC6Xm97" target="_blank">Befu 2-chōme-21-23</a><br>
+        <strong>⚠️ 5/1 重要預約日 (12:00)：</strong><br>
+        1. 預約：<a href="https://www.google.com/search?q=水炊鍋+橙+預約" target="_blank">[水炊鍋 橙]</a><br>
+        2. 預約：<a href="https://www.tablecheck.com/zh-TW/yakiniku-nikuichi/reserve" target="_blank">[藥院燒肉 NIKUICHI]</a>
+    </div>
+
+    <div class="day-container">
+        <div class="day-title">Day 1 抵達福岡 <span>6/3 (一)</span></div>
+        <div class="item"><div class="time">06:45</div><div class="activity">🛫 台灣出發</div></div>
+        <div class="item"><div class="time">10:05</div><div class="activity">🛬 抵達福岡機場</div></div>
+        <div class="item">
+            <div class="time">10:30</div>
+            <div class="activity">
+                <a href="https://www.google.com/maps/search/?api=1&query=Fukuoka+Airport" target="_blank">🚗 導航：抵達福岡機場 (取車)</a><span class="tag tag-car">自駕</span>
+            </div>
+        </div>
+        <div class="item"><div class="time">12:00</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=水炊鍋+橙">🍲 導航：水炊鍋 橙</a><span class="tag tag-food">需預約</span></div></div>
+        <div class="item"><div class="time">16:00</div><div class="activity">🔑 住宿 Check-in 休息</div></div>
+        <div class="item"><div class="time">17:30</div><div class="activity">🍴 晚餐 / 🛒 買隔天早餐<span class="tag tag-shop">任務</span></div></div>
+    </div>
+
+    <div class="day-container">
+        <div class="day-title" style="background: #22a6b3;">Day 2 自然冒險 <span>6/4 (二)</span></div>
+        <div class="item"><div class="time">09:00</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=九州自然動物園">🦒 導航：九州自然動物園</a><span class="tag tag-baby">要早起</span></div></div>
+        <div class="item"><div class="time">PM</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=湯布院フローラルヴィレッジ">🏰 備案：湯布院花卉村 (導航)</a></div></div>
+        <div class="item"><div class="time">17:00</div><div class="activity"><a href="https://maps.app.goo.gl/yTdq8mY565pC6Xm97">🏠 導航：回住宿休息</a></div></div>
+        <div class="item"><div class="time">18:30</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=燒肉+NIKUICHI+藥院店">🥩 導航：藥院燒肉 NIKUICHI</a><span class="tag tag-food">預約</span></div></div>
+    </div>
+
+    <div class="day-container">
+        <div class="day-title" style="background: #6ab04c;">Day 3 太宰府人文 <span>6/5 (三)</span></div>
+        <div class="item"><div class="time">09:45</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=太宰府駐車センター">🅿️ 導航：太宰府駐車中心</a></div></div>
+        <div class="item"><div class="time">10:00</div><div class="activity">⛩️ 天滿宮參拜 / 參道散策<span class="tag tag-baby">推車OK</span></div></div>
+        <div class="item"><div class="time">13:30</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=九州國立博物館">🏛️ 導航：九州國立博物館</a></div></div>
+        <div class="item">
+            <div class="time">傍晚</div>
+            <div class="activity">
+                <a href="https://maps.app.goo.gl/yTdq8mY565pC6Xm97">🚗 導航：返回住宿</a><span class="tag tag-car">重要：聯繫還車</span>
+            </div>
+        </div>
+    </div>
+
+    <div class="day-container">
+        <div class="day-title" style="background: #f0932b;">Day 4 購物 <span>6/6 (四)</span></div>
+        <div class="item"><div class="time">上午</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=天神地下街">🛍️ 導航：天神商圈 (百貨/藥妝)</a></div></div>
+        <div class="item"><div class="time">下午</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=LaLaport+福岡">🤖 導航：LaLaport </a><span class="tag tag-shop">必逛</span></div></div>
+    </div>
+
+    <div class="day-container">
+        <div class="day-title" style="background: #be2edd;">Day 5 先排而已 <span>6/7 (五)</span></div>
+        <div class="item"><div class="time">10:00</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=福岡麵包超人兒童博物館">🍞 導航：麵包超人博物館</a><span class="tag tag-baby">放電</span></div></div>
+        <div class="item"><div class="time">下午</div><div class="activity">☕ 藥院下午茶</div></div>
+    </div>
+
+    <div class="day-container">
+        <div class="day-title" style="background: #eb4d4b;">Day 6 最後補貨 <span>6/8 (六)</span></div>
+        <div class="item"><div class="time">全天</div><div class="activity"><a href="https://www.google.com/maps/search/?api=1&query=博多運河城">🎁 導航：博多運河城 / 車站百貨</a></div></div>
+    </div>
+
+    <div class="day-container">
+        <div class="day-title" style="background: #535c68;">Day 7 回程 <span>6/9 (日)</span></div>
+        <div class="item">
+            <div class="time">09:00</div>
+            <div class="activity">
+                <strong>🧳 退房 & 寄放行李</strong>
+                <div class="link-box"><a href="https://www.japanuts.com/2024/08/7.html" target="_blank">🔗 點我查看：行李寄放與櫃位攻略</a></div>
+            </div>
+        </div>
+        <div class="item"><div class="time">13:00</div><div class="activity">🚕 前往機場報到</div></div>
+        <div class="item"><div class="time">17:55</div><div class="activity">🛫 飛機起飛</div></div>
+    </div>
+
+    <div class="wishlist-container">
+        <div class="wishlist-title">📋 備選景點 (滾動式調整)</div>
+        <div class="wishlist-item">🥯 <strong>赤坂煙草店 (妖怪麵包)：</strong> <a href="https://www.google.com/maps/search/?api=1&query=赤坂煙草店+妖怪パン">導航</a></div>
+        <div class="wishlist-item">🥖 <strong>Full Full 明太子麵包：</strong> <a href="https://www.google.com/maps/search/?api=1&query=FullFull+Hakata">導航</a></div>
+        <div class="wishlist-item">🥐 <strong>太宰府小吃甜點：</strong> <a href="https://www.google.com/maps/search/?api=1&query=太宰府+スイーツ">導航</a></div>
+        <div class="wishlist-item">☕ <strong>藥院散策區：</strong> <a href="https://www.google.com/maps/search/?api=1&query=薬院+カフェ">導航</a></div>
+    </div>
+
+    <div class="footer">祝旅行圓滿順利不要吵架，品森 & 星源都乖乖！🚀</div>
+</body>
+</html>
